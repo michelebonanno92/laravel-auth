@@ -18,8 +18,8 @@ class DatabaseSeeder extends Seeder
         User::truncate();
         
         User::factory()->create([
-            'name' => 'Alessio',
-            'email' => 'alessio@boolean.careers',
+            'name' => 'Michele',
+            'email' => 'michele@boolean.careers',
         ]);
 
         $this->call([
