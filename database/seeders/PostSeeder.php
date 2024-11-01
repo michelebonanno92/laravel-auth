@@ -17,7 +17,7 @@ class PostSeeder extends Seeder
     {
         Post::truncate();
         
-        for ($i = 0; $i < 50; $i++) {
+        for ($i = 0; $i < 20; $i++) {
             $title = fake()->sentence();
 
             Post::create([
