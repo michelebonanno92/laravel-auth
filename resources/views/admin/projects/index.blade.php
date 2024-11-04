@@ -10,6 +10,9 @@
                     <h1 class="text-center text-info">
                         Tutti i progetti 
                     </h1>
+                    <a href="{{ route('admin.projects.create')}}" class="btn btn-success w-100">
+                      + Aggiungi Progetto
+                    </a>
                 </div>
             </div>
 
@@ -31,6 +34,9 @@
                       <td>
                         <a href="{{ route('admin.projects.show', ['project' => $project->id]) }}" class="btn btn-primary">
                           Vedi
+                         </a>
+                         <a href="{{ route('admin.projects.create', ['project' => $project->id]) }}" class="btn btn-warning">
+                           Modifica
                          </a>
                       </td>
                    
