@@ -25,7 +25,8 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.projects.create');
+
     }
 
     /**
@@ -33,7 +34,21 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required|min:3|max:6',
+        ],[
+            'name.min' => 'il campo name deve avere minimo 3 caratteri'
+            
+        ]);
+
+        $data = $request->all();
+
+        $project = new Project();
+
+        $project->save;
+
+        return redirect()->route('admin.projects.show', ['project' => $project->id]);
+        // dd($project);
     }
 
     /**
@@ -41,6 +56,10 @@ class ProjectController extends Controller
      */
     public function show(Project $project)
     {
+        
+        // if (!$project){
+        //     abort(404);
+        //     } 
         return view('admin.projects.show', compact('project'));
         
     }
