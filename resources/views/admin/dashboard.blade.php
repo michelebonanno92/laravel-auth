@@ -14,6 +14,8 @@
                     La dashboard è una pagina privata (protetta dal middleware)
                 </div>
             </div>
+
         </div>
     </div>
-@endsection
+
+

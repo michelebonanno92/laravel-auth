@@ -13,5 +13,11 @@
                 </div>
             </div>
         </div>
-    </div>
+        <div>
+            <div class="mb-4">
+               <a href="{{route('admin.projects.index') }}" class="btn btn-primary w-100">
+                  Tutti i progetti
+               </a>
+            </div>
+       </div> 
 @endsection
